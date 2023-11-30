@@ -2,7 +2,136 @@
   "title": "Custom qwerty keyboard",
   "rules": [
     {
-      "description": "Accents on njkl",
+      "description": "composite letters œ æ",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "simultaneous": [
+              {
+                "key_code": "a"
+              },
+              {
+                "key_code": "e"
+              }
+            ],
+            "simultaneous_options": {
+              "key_down_order": "strict",
+              "key_up_order": "strict"
+            }
+          },
+          "parameters": {
+            "basic.simultaneous_threshold_milliseconds": 400
+          },
+          "to": [
+            {
+              "key_code": "quote",
+              "modifiers": [
+                "option"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "simultaneous": [
+              {
+                "key_code": "a"
+              },
+              {
+                "key_code": "e"
+              }
+            ],
+            "simultaneous_options": {
+              "key_down_order": "strict",
+              "key_up_order": "strict"
+            },
+            "modifiers": {
+              "mandatory": [
+                "shift"
+              ]
+            }
+          },
+          "parameters": {
+            "basic.simultaneous_threshold_milliseconds": 400
+          },
+          "to": [
+            {
+              "key_code": "quote",
+              "modifiers": [
+                "option",
+                "shift"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "simultaneous": [
+              {
+                "key_code": "o"
+              },
+              {
+                "key_code": "e"
+              }
+            ],
+            "simultaneous_options": {
+              "key_down_order": "strict",
+              "key_up_order": "strict"
+            }
+          },
+          "parameters": {
+            "basic.simultaneous_threshold_milliseconds": 400
+          },
+          "to": [
+            {
+              "key_code": "q",
+              "modifiers": [
+                "option"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "simultaneous": [
+              {
+                "key_code": "o"
+              },
+              {
+                "key_code": "e"
+              }
+            ],
+            "simultaneous_options": {
+              "key_down_order": "strict",
+              "key_up_order": "strict"
+            },
+            "modifiers": {
+              "mandatory": [
+                "shift"
+              ]
+            }
+          },
+          "parameters": {
+            "basic.simultaneous_threshold_milliseconds": 400
+          },
+          "to": [
+            {
+              "key_code": "q",
+              "modifiers": [
+                "option",
+                "shift"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Accents on njkl and cedilla on ,",
       "manipulators": [
         {
           "type": "basic",
@@ -37,6 +166,40 @@
           "from": {
             "simultaneous": [
               {
+                "key_code": "c"
+              },
+              {
+                "key_code": "comma"
+              }
+            ],
+            "simultaneous_options": {
+              "key_down_order": "strict",
+              "key_up_order": "strict_inverse"
+            },
+            "modifiers": {
+              "mandatory": [
+                "shift"
+              ]
+            }
+          },
+          "parameters": {
+            "basic.simultaneous_threshold_milliseconds": 400
+          },
+          "to": [
+            {
+              "key_code": "c",
+              "modifiers": [
+                "shift",
+                "option"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "simultaneous": [
+              {
                 "key_code": "comma"
               },
               {
@@ -61,130 +224,6 @@
               "key_code": "non_us_backslash",
               "modifiers": [
                 "right_shift"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "simultaneous": [
-              {
-                "key_code": "a"
-              },
-              {
-                "key_code": "e"
-              }
-            ],
-            "simultaneous_options": {
-              "key_down_order": "strict",
-              "key_up_order": "strict"
-            }
-          },
-          "parameters": {
-            "basic.simultaneous_threshold_milliseconds": 400
-          },
-          "to": [
-            {
-              "key_code": "quote",
-              "modifiers": [
-                "option"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "simultaneous": [
-              {
-                "key_code": "a"
-              },
-              {
-                "key_code": "e"
-              }
-            ],
-            "simultaneous_options": {
-              "key_down_order": "strict",
-              "key_up_order": "strict"
-            },
-            "modifiers": {
-              "mandatory": [
-                "shift"
-              ]
-            }
-          },
-          "parameters": {
-            "basic.simultaneous_threshold_milliseconds": 400
-          },
-          "to": [
-            {
-              "key_code": "quote",
-              "modifiers": [
-                "option",
-                "shift"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "simultaneous": [
-              {
-                "key_code": "o"
-              },
-              {
-                "key_code": "e"
-              }
-            ],
-            "simultaneous_options": {
-              "key_down_order": "strict",
-              "key_up_order": "strict"
-            }
-          },
-          "parameters": {
-            "basic.simultaneous_threshold_milliseconds": 400
-          },
-          "to": [
-            {
-              "key_code": "q",
-              "modifiers": [
-                "option"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "simultaneous": [
-              {
-                "key_code": "o"
-              },
-              {
-                "key_code": "e"
-              }
-            ],
-            "simultaneous_options": {
-              "key_down_order": "strict",
-              "key_up_order": "strict"
-            },
-            "modifiers": {
-              "mandatory": [
-                "shift"
-              ]
-            }
-          },
-          "parameters": {
-            "basic.simultaneous_threshold_milliseconds": 400
-          },
-          "to": [
-            {
-              "key_code": "q",
-              "modifiers": [
-                "option",
-                "shift"
               ]
             }
           ]
@@ -2431,6 +2470,28 @@
           "type": "basic",
           "from": {
             "modifiers": {
+              "mandatory": [
+                "right_gui"
+              ],
+              "optional": [
+                "any"
+              ]
+            },
+            "key_code": "delete_or_backspace"
+          },
+          "to": [
+            {
+              "key_code": "delete_or_backspace"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "modifiers": {
+              "mandatory": [
+                "right_gui"
+              ],
               "optional": [
                 "any"
               ]
@@ -2447,7 +2508,6 @@
           "type": "basic",
           "from": {
             "modifiers": {
-              "mandatory": "right_gui",
               "optional": [
                 "any"
               ]
@@ -2456,7 +2516,7 @@
           },
           "to": [
             {
-              "key_code": "delete_or_backspace"
+              "key_code": "delete_forward"
             }
           ]
         }
@@ -2575,6 +2635,31 @@
           "to": [
             {
               "key_code": "right_arrow"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "show dock on right-cmd + backslash",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "modifiers": {
+              "mandatory": "right_gui",
+              "optional": [
+                "any"
+              ]
+            },
+            "key_code": "backslash"
+          },
+          "to": [
+            {
+              "modifiers": [
+                "left_control"
+              ],
+              "key_code": "f3"
             }
           ]
         }
